@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/new/prefix1">
+        <file>kisspng-computer-icons-data-processing-symbol-binary-file-binary-5adce09648a315.9407443615244248542975.ico</file>
+        <file>ram_chip.ico</file>
+    </qresource>
+</RCC>
