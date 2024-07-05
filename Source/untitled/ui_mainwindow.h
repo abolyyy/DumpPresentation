@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'mainwindow.ui'
 **
-** Created by: Qt User Interface Compiler version 6.3.0
+** Created by: Qt User Interface Compiler version 6.5.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -10,7 +10,7 @@
 #define UI_MAINWINDOW_H
 
 #include <QtCore/QVariant>
-//#include <QtGui/QAction>
+#include <QtGui/QAction>
 #include <QtGui/QIcon>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QComboBox>
@@ -39,15 +39,15 @@ public:
     QLineEdit *pl_Address;
     QComboBox *comSel;
     QLabel *label_3;
+    QStatusBar *statusbar;
     QMenuBar *menubar;
     QMenu *menuFile;
     QMenu *menuHelp;
-    QStatusBar *statusbar;
 
     void setupUi(QMainWindow *MainWindow)
     {
         if (MainWindow->objectName().isEmpty())
-            MainWindow->setObjectName(QString::fromUtf8("MainWindow"));
+            MainWindow->setObjectName("MainWindow");
         MainWindow->resize(350, 350);
         MainWindow->setMinimumSize(QSize(350, 350));
         MainWindow->setMaximumSize(QSize(350, 350));
@@ -62,62 +62,67 @@ public:
         icon.addFile(QString::fromUtf8(":/new/prefix1/ram_chip.ico"), QSize(), QIcon::Selected, QIcon::On);
         MainWindow->setWindowIcon(icon);
         actionOpen = new QAction(MainWindow);
-        actionOpen->setObjectName(QString::fromUtf8("actionOpen"));
+        actionOpen->setObjectName("actionOpen");
         actionExit = new QAction(MainWindow);
-        actionExit->setObjectName(QString::fromUtf8("actionExit"));
+        actionExit->setObjectName("actionExit");
         actionAbout = new QAction(MainWindow);
-        actionAbout->setObjectName(QString::fromUtf8("actionAbout"));
+        actionAbout->setObjectName("actionAbout");
         centralwidget = new QWidget(MainWindow);
-        centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
+        centralwidget->setObjectName("centralwidget");
         pushButton = new QPushButton(centralwidget);
-        pushButton->setObjectName(QString::fromUtf8("pushButton"));
-        pushButton->setGeometry(QRect(60, 145, 230, 60));
+        pushButton->setObjectName("pushButton");
+        pushButton->setGeometry(QRect(80, 150, 230, 60));
         QFont font;
         font.setPointSize(12);
         pushButton->setFont(font);
         label = new QLabel(centralwidget);
-        label->setObjectName(QString::fromUtf8("label"));
+        label->setObjectName("label");
         label->setGeometry(QRect(10, 20, 71, 22));
         label->setFont(font);
         label_2 = new QLabel(centralwidget);
-        label_2->setObjectName(QString::fromUtf8("label_2"));
+        label_2->setObjectName("label_2");
         label_2->setGeometry(QRect(10, 240, 71, 21));
         label_2->setFont(font);
         pl_res = new QLineEdit(centralwidget);
-        pl_res->setObjectName(QString::fromUtf8("pl_res"));
+        pl_res->setObjectName("pl_res");
         pl_res->setGeometry(QRect(80, 240, 250, 21));
         QFont font1;
         font1.setPointSize(10);
         pl_res->setFont(font1);
         pl_res->setReadOnly(true);
         pl_Address = new QLineEdit(centralwidget);
-        pl_Address->setObjectName(QString::fromUtf8("pl_Address"));
-        pl_Address->setGeometry(QRect(80, 20, 240, 22));
+        pl_Address->setObjectName("pl_Address");
+        pl_Address->setGeometry(QRect(81, 21, 240, 22));
         pl_Address->setFont(font1);
         pl_Address->setReadOnly(true);
         comSel = new QComboBox(centralwidget);
         comSel->addItem(QString());
         comSel->addItem(QString());
         comSel->addItem(QString());
-        comSel->setObjectName(QString::fromUtf8("comSel"));
-        comSel->setGeometry(QRect(150, 60, 171, 25));
+        comSel->setObjectName("comSel");
+        comSel->setGeometry(QRect(150, 62, 171, 25));
         comSel->setFont(font1);
+        comSel->setCursor(QCursor(Qt::ArrowCursor));
+        comSel->setEditable(false);
         label_3 = new QLabel(centralwidget);
-        label_3->setObjectName(QString::fromUtf8("label_3"));
+        label_3->setObjectName("label_3");
         label_3->setGeometry(QRect(10, 60, 141, 22));
         label_3->setFont(font);
         MainWindow->setCentralWidget(centralwidget);
+        statusbar = new QStatusBar(MainWindow);
+        statusbar->setObjectName("statusbar");
+        MainWindow->setStatusBar(statusbar);
         menubar = new QMenuBar(MainWindow);
-        menubar->setObjectName(QString::fromUtf8("menubar"));
+        menubar->setObjectName("menubar");
         menubar->setGeometry(QRect(0, 0, 350, 21));
         menuFile = new QMenu(menubar);
-        menuFile->setObjectName(QString::fromUtf8("menuFile"));
+        menuFile->setObjectName("menuFile");
         menuHelp = new QMenu(menubar);
-        menuHelp->setObjectName(QString::fromUtf8("menuHelp"));
+        menuHelp->setObjectName("menuHelp");
         MainWindow->setMenuBar(menubar);
-        statusbar = new QStatusBar(MainWindow);
-        statusbar->setObjectName(QString::fromUtf8("statusbar"));
-        MainWindow->setStatusBar(statusbar);
+        QWidget::setTabOrder(pushButton, pl_Address);
+        QWidget::setTabOrder(pl_Address, comSel);
+        QWidget::setTabOrder(comSel, pl_res);
 
         menubar->addAction(menuFile->menuAction());
         menubar->addAction(menuHelp->menuAction());
@@ -143,8 +148,8 @@ public:
         pl_res->setText(QCoreApplication::translate("MainWindow", " You didn't do anything", nullptr));
         pl_Address->setText(QCoreApplication::translate("MainWindow", "  Please open a file", nullptr));
         comSel->setItemText(0, QCoreApplication::translate("MainWindow", "CPH_Xantia_2000", nullptr));
-        comSel->setItemText(1, QCoreApplication::translate("MainWindow", "ME 7.4", nullptr));
-        comSel->setItemText(2, QCoreApplication::translate("MainWindow", "ME 5.2", nullptr));
+        comSel->setItemText(1, QCoreApplication::translate("MainWindow", "C5_ECU_MOTOR_MAGNETIMARELLI", nullptr));
+        comSel->setItemText(2, QCoreApplication::translate("MainWindow", "206_BSI", nullptr));
 
         label_3->setText(QCoreApplication::translate("MainWindow", "choose your option:", nullptr));
         menuFile->setTitle(QCoreApplication::translate("MainWindow", "File", nullptr));

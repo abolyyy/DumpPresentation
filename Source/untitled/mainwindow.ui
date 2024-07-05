@@ -40,8 +40,8 @@
    <widget class="QPushButton" name="pushButton">
     <property name="geometry">
      <rect>
-      <x>60</x>
-      <y>145</y>
+      <x>80</x>
+      <y>150</y>
       <width>230</width>
       <height>60</height>
      </rect>
@@ -115,8 +115,8 @@
    <widget class="QLineEdit" name="pl_Address">
     <property name="geometry">
      <rect>
-      <x>80</x>
-      <y>20</y>
+      <x>81</x>
+      <y>21</y>
       <width>240</width>
       <height>22</height>
      </rect>
@@ -137,7 +137,7 @@
     <property name="geometry">
      <rect>
       <x>150</x>
-      <y>60</y>
+      <y>62</y>
       <width>171</width>
       <height>25</height>
      </rect>
@@ -147,6 +147,12 @@
       <pointsize>10</pointsize>
      </font>
     </property>
+    <property name="cursor">
+     <cursorShape>ArrowCursor</cursorShape>
+    </property>
+    <property name="editable">
+     <bool>false</bool>
+    </property>
     <item>
      <property name="text">
       <string>CPH_Xantia_2000</string>
@@ -154,12 +160,12 @@
     </item>
     <item>
      <property name="text">
-      <string>ME 7.4</string>
+      <string>C5_ECU_MOTOR_MAGNETIMARELLI</string>
      </property>
     </item>
     <item>
      <property name="text">
-      <string extracomment="fasdfrsdf">ME 5.2</string>
+      <string>206_BSI</string>
      </property>
     </item>
    </widget>
@@ -182,6 +188,7 @@
     </property>
    </widget>
   </widget>
+  <widget class="QStatusBar" name="statusbar"/>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
     <rect>
@@ -208,7 +215,6 @@
    <addaction name="menuFile"/>
    <addaction name="menuHelp"/>
   </widget>
-  <widget class="QStatusBar" name="statusbar"/>
   <action name="actionOpen">
    <property name="text">
     <string>Open</string>
@@ -225,6 +231,12 @@
    </property>
   </action>
  </widget>
+ <tabstops>
+  <tabstop>pushButton</tabstop>
+  <tabstop>pl_Address</tabstop>
+  <tabstop>comSel</tabstop>
+  <tabstop>pl_res</tabstop>
+ </tabstops>
  <resources>
   <include location="icon.qrc"/>
  </resources>
