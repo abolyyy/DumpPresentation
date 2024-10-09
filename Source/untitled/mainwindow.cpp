@@ -34,7 +34,7 @@ MainWindow::MainWindow(QWidget *parent)
     connect(ui->actionAbout,&QAction::triggered,this,&MainWindow::about);
 
     db=QSqlDatabase::addDatabase("QSQLITE");
-    db.setDatabaseName("E:\\da\\SQLITE EXPERT v1.1.2\\MAIN.db3");
+    db.setDatabaseName("C:\\Program Files\\DumpPresentation\\DBFile\\MAIN.db3");
     db.open();
 
 }
